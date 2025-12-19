@@ -33,5 +33,30 @@ CSV Output
 - requests
 - Google Colab
 
+- ## Database Ingestion (Local MySQL)
+
+After validating the ETL process in Google Colab and exporting the cleaned data as CSV,  
+the data is ingested into a local MySQL database using Python and SQLAlchemy.
+
+### Details
+- Database: MySQL (local)
+- Schema: mlb_db
+- Table: mlb_games
+- Primary Key: gamePk
+
+### Ingestion Flow
+CSV
+→ Python (pandas, SQLAlchemy)
+→ Local MySQL
+→ Verification via MySQL Workbench
+
+### Verification
+- Row count check (`COUNT(*)`)
+- System table validation (`information_schema.tables`)
+- Primary key constraint prevents duplicate game records
+
+This step completes the full ETL pipeline in a local environment before cloud deployment.
+
+
 ## Notes
 - Database ingestion (MySQL) is planned as the next step and will be executed in a local environment.
