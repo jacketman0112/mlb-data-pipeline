@@ -57,6 +57,13 @@ CSV
 
 This step completes the full ETL pipeline in a local environment before cloud deployment.
 
+## Cloud Deployment (GCP)
+
+The ETL pipeline was successfully deployed to Google Cloud SQL (MySQL).
+Data was ingested from Python into Cloud SQL via public IP with authorized networks,
+and verified using Cloud SQL Studio (`COUNT(*)`).
+
+
 
 ## Notes
 - Database ingestion (MySQL) is planned as the next step and will be executed in a local environment.
